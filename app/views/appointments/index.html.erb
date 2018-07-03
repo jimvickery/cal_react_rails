@@ -1,1 +1,17 @@
-<h1>React Calendar</h1>
+<h1> React Calendar </h1>
+
+<h1> Appointments </h1>
+
+
+<h1> Make a new appointment </h1>
+
+ <%= form_for( @appointment , remote: true) do |f| %>
+<%= f.text_field (:title) %>
+<%= f.text_field (:appt_time) %>
+<%= f.submit "Make Appointment", disable_with: 'Submiting...' %>
+<% end %>
+
+<% @appointments.each do |appointment| %>
+  <%= appointment.title %>
+  <%= appointment.appt_time %>
+<% end %>
