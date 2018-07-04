@@ -5,10 +5,10 @@
 
 <h1> Make a new appointment </h1>
 
- <%= form_for( @appointment , remote: true) do |f| %>
-<%= f.text_field (:title) %>
-<%= f.text_field (:appt_time) %>
-<%= f.submit "Make Appointment", disable_with: 'Submiting...' %>
+ <%= simple_form_for( @appointment) do |f| %>
+<%= f.input :title %>
+<%= f.input :appt_time %>
+<%= f.button :submit %>
 <% end %>
 
 <% @appointments.each do |appointment| %>
