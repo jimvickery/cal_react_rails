@@ -2,7 +2,7 @@
 <h1> Appointments </h1>
 <h1> Make a new appointment </h1>
 
- <%= simple_form_for( @appointment, remote: true) do |f| %>
+ <%= simple_form_for(@appointment, remote: true) do |f| %>
 <%= f.input :title %>
 <%= f.input :appt_time %>
 <%= f.button :submit %>
